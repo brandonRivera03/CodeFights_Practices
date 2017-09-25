@@ -1,0 +1,16 @@
+function adjacentElementsProduct($inputArray) {
+    $highestProduct = $inputArray[0] * $inputArray[1];
+    $currentIdx = 1;
+    $arraySize = count($inputArray) - 1;
+    
+    while($currentIdx < $arraySize) {
+        $currentProduct = $inputArray[$currentIdx] * $inputArray[$currentIdx + 1];
+        
+        if($currentProduct > $highestProduct)
+            $highestProduct = $currentProduct;
+        
+        $currentIdx++;
+    }
+    
+    return $highestProduct;
+}

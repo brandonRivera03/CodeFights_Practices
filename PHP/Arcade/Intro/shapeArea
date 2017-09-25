@@ -1,0 +1,15 @@
+function shapeArea($n) {
+    $area = 0;
+    
+    while($n > 1) {
+        $area += (($n-1) * 4);
+        
+        $n--;
+    }
+    
+    if($n == 1)
+        $area += 1;
+    
+    return $area;
+}
+

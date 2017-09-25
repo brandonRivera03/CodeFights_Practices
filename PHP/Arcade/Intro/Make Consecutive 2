@@ -1,0 +1,21 @@
+function makeArrayConsecutive2($statues) {
+    $minVal = $statues[0];
+    $maxVal = $status[0];
+    $length = count($statues);
+    $index = 0;
+    
+    // We obtain the unique minimum and maximum values
+    while($index < $length) {
+        if($statues[$index] < $minVal)
+            $minVal = $statues[$index];
+        if($statues[$index] > $maxVal)
+            $maxVal = $statues[$index];
+        
+        $index++;
+    }
+    
+    $difference = $maxVal - $minVal;
+    
+    return $difference - $length + 1;
+}
+
