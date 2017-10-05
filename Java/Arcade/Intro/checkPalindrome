@@ -1,0 +1,14 @@
+boolean checkPalindrome(String inputString) {
+    int startIdx = 0;
+    int endIdx = inputString.length() - 1;
+    
+    while(startIdx < endIdx) {
+        if(inputString.charAt(startIdx) != inputString.charAt(endIdx))
+            return false;
+        
+        startIdx++;
+        endIdx--;
+    }
+    
+    return true;
+}
